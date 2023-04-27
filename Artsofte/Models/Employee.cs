@@ -13,12 +13,13 @@ namespace Artsofte.Models
     {
         [Key] public int Id { get; set; }
 
-        [Required][MinLength(2)][MaxLength(20)]
+        [Required] [MinLength(2)] [MaxLength(20)]
         public string Name { get; set; }
 
-        [Required][MinLength(2)][MaxLength(20)]
+        [Required] [MinLength(2)] [MaxLength(20)]
         public string Surname { get; set; }
       
+        [Range(18,100)]
         public int Age { get; set; }
         public Gender Gender { get; set; }
         public Department Department { get; set; }

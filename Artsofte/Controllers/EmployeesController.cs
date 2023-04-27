@@ -47,7 +47,7 @@ namespace Artsofte.Controllers
         }
 
         // GET: Employees/Create
-        public IActionResult Create()
+        public IActionResult Add()
         {
             return View();
         }
@@ -56,7 +56,7 @@ namespace Artsofte.Controllers
        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Surname,Age,Gender,Department")] Employee employee)
+        public async Task<IActionResult> Add([Bind("Id,Name,Surname,Age,Gender,Department")] Employee employee)
         {
             if (ModelState.IsValid)
             {
